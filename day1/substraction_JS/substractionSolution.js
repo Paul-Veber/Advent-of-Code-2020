@@ -4,9 +4,7 @@ const silver = () => {
   for (const number of input) {
     const substraction = 2020 - number;
     const search = input.indexOf(substraction);
-    console.log(search);
     if (search >= 0) {
-      console.log("test");
       const first = number;
       const second = substraction;
       const solution = first * substraction;
