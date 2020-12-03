@@ -1,4 +1,4 @@
-import { array } from "./test.js"
+import { array } from "./input.js"
 
 const resetPosition = (input, index) => {
     if (!input[index]) {
