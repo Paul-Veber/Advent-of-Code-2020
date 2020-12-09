@@ -10,8 +10,8 @@ const resetPosition = (input, index) => {
 
 const checkThree = (iteration, iterationJump, index, indexJump, count) => {
     const solution = count
-    console.log(`solution ${solution}`)
-    if (iteration === array.length) return solution
+    if (iteration >= array.length) return solution
+    console.log(iteration)
 
     const currentIteration = iteration
 
@@ -21,7 +21,7 @@ const checkThree = (iteration, iterationJump, index, indexJump, count) => {
 
     const check = ligne[currentIndex]
 
-    check === "."
+    return check === "."
         ? checkThree(
               currentIteration + iterationJump,
               iterationJump,
@@ -38,5 +38,11 @@ const checkThree = (iteration, iterationJump, index, indexJump, count) => {
           )
 }
 
-console.log(checkThree(0, 1, 0, 3, 0))
+const solution =
+    checkThree(0, 1, 0, 1, 0) *
+    checkThree(0, 1, 0, 3, 0) *
+    checkThree(0, 1, 0, 5, 0) *
+    checkThree(0, 1, 0, 7, 0) *
+    checkThree(0, 2, 0, 1, 0)
 
+console.log(solution)
